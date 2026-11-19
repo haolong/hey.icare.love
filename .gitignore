@@ -1,0 +1,5 @@
+# local-only: build helpers, preview config, print source and PDF
+.claude/
+tools/
+print.html
+*.pdf

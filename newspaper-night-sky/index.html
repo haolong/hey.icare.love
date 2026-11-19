@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Newspaper Night Sky — Haolong Hou</title>
+<meta name="description" content="Newspaper Night Sky: how news moved through American newspapers, 1770–1810. Every story printed in two or more papers becomes a star.">
+<meta property="og:title" content="Newspaper Night Sky — Haolong Hou">
+<meta property="og:image" content="https://hey.icare.love/assets/img/nns/home.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23111'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../">Haolong Hou</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../" aria-current="page">Work</a>
+      <a href="../info/">Info</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <a class="back" href="../#work">← All work</a>
+
+  <header class="proj-head">
+    <p class="eyebrow"><b>02</b> · Oct – Nov 2026 · Major Studio 1</p>
+    <h1>Newspaper Night Sky</h1>
+    <p class="lede">How news moved through American newspapers, 1770–1810. In those decades, papers spread news by reprinting each other's stories. I found every story that appears in two or more papers in one surviving archive (48,296 of them) and made them into a night sky you can search, sort, follow and listen to.</p>
+    <dl class="facts">
+      <div><dt>Role</dt><dd>Solo project: data pipeline, research, design and code</dd></div>
+      <div><dt>Context</dt><dd>Major Studio 1, MS Data Visualization, Parsons. Presented on Nov 17, 2026 to the class and the Smithsonian team behind the dataset</dd></div>
+      <div><dt>Data</dt><dd>Smithsonian <em>Revolution Crossroads</em> collection, drawn from the Library of Congress's Chronicling America: 77,793 pages from 110 newspapers</dd></div>
+      <div><dt>Links</dt><dd><a href="https://newspapers.icare.love/">Live site</a> · <a href="https://github.com/Major-Studio-1/Project-02-newspaper-night-sky">Code and method on GitHub</a></dd></div>
+    </dl>
+    <p class="ai-note">Tools: Python, SQLite, NMF topic modelling, text-reuse matching, three.js/WebGL, Canvas, Kokoro text-to-speech. AI help: OpenAI Codex and Claude Code for implementation.</p>
+  </header>
+
+  <figure class="hero-fig">
+    <img src="../assets/img/nns/home.jpg" srcset="../assets/img/nns/home-sm.jpg 900w, ../assets/img/nns/home.jpg 1800w" sizes="(max-width: 1200px) 100vw, 1120px" width="1800" height="855" alt="Home page: Watch news travel through early American newspapers, beside a dark sky of stories.">
+    <figcaption><span class="k">Home</span>One question, one search box, and the sky.</figcaption>
+  </figure>
+
+  <section class="chapter">
+    <div class="chapter-side"><span class="chapter-no">01</span><span class="label">Story telescope</span></div>
+    <div class="body">
+      <h2>Every story is a star</h2>
+      <p>In the Story telescope, each reprinted story is a star and time runs into the depth: <strong>the further away a star is, the earlier the story.</strong> Viewers can arrange the sky by Place (the town of first printing), Topic (radial wedges from topic modelling) or Orbit (time of year), search it, compare up to three words in colour, and let time drift.</p>
+      <figure>
+        <img src="../assets/img/nns/telescope-place.jpg" srcset="../assets/img/nns/telescope-place-sm.jpg 900w, ../assets/img/nns/telescope-place.jpg 1800w" sizes="(max-width: 900px) 100vw, 840px" width="1800" height="1012" loading="lazy" alt="Telescope interface in Place view for 1806, with controls on the left and clusters of stars by town.">
+        <figcaption><span class="k">Place</span>Stories grouped by the town that printed them first, 1806.</figcaption>
+      </figure>
+      <div class="figs two">
+        <figure><img src="../assets/img/nns/telescope-topic-sm.jpg" width="900" height="428" loading="lazy" alt="Topic view: stars arranged in radial wedges labelled by topic family."><figcaption>Topic: radial wedges by topic family</figcaption></figure>
+        <figure><img src="../assets/img/nns/telescope-orbit-sm.jpg" width="900" height="427" loading="lazy" alt="Orbit view: a search for anniversary of independence lights up gold stars clustered in July to September."><figcaption>Orbit: "anniversary of independence" clusters in summer</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-side"><span class="chapter-no">02</span><span class="label">Pulses</span></div>
+    <div class="body">
+      <h2>Follow one story from paper to paper</h2>
+      <p>In Pulses, each newspaper is a point on a map that lights up on the days it printed a story. A constellation line joins one story's printings, with the passage and the page scan alongside.</p>
+      <figure>
+        <img src="../assets/img/nns/pulses.jpg" srcset="../assets/img/nns/pulses-sm.jpg 900w, ../assets/img/nns/pulses.jpg 1800w" sizes="(max-width: 900px) 100vw, 840px" width="1800" height="1012" loading="lazy" alt="Pulses view: a constellation of newspapers connected by lines for one 1807 story, with a panel marking the printings as checked.">
+        <figcaption><span class="k">Pulses</span>One 1807 story's printings, each checked against its page scan.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-side"><span class="chapter-no">03</span><span class="label">Method</span></div>
+    <div class="body">
+      <h2>Observed facts, not big claims</h2>
+      <p>The site only shows what the archive supports: "newspaper X printed this on date Y." It never draws who-copied-whom lines, and it keeps gaps visible, because a thin year is a gap in the archive, not silence. Evidence comes in two tiers that stay apart everywhere:</p>
+      <p><strong>143 reviewed stories</strong> (1,659 printings), each read and checked against the page scans, and <strong>48,270 matched stories</strong> found automatically by shared wording and labelled "not checked." The pipeline is published as versioned data releases with validation checks.</p>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-side"><span class="chapter-no">04</span><span class="label">Radio &amp; Stories</span></div>
+    <div class="body">
+      <h2>Hear a day's news</h2>
+      <p>Radio is a dial tuned to a past date. It greets the town ("Good morning, Philadelphia! It is Saturday, the sixth of July, 1776…") and reads that day's papers aloud from 8,660 recorded voice clips. Stories tells two storylines straight from the papers, with each transcription beside a crop of the original page. An exhibition mode loops the site on a large screen with QR codes.</p>
+      <div class="figs two">
+        <figure><img src="../assets/img/nns/radio-sm.jpg" width="900" height="506" loading="lazy" alt="Radio dial set to Saturday 6 July 1776, reading the Declaration of Independence."><figcaption>Radio, 6 July 1776</figcaption></figure>
+        <figure><img src="../assets/img/nns/stories-sm.jpg" width="900" height="428" loading="lazy" alt="Stories page: a transcription of a 1776 article beside a crop of the original newspaper scan."><figcaption>Stories: transcription beside the 1776 scan</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <a class="next-proj" href="../owney/"><span class="label">Next project</span><strong>Owney — A Life in Tags →</strong></a>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="contact"><a href="../info/">Info</a><a href="https://www.instagram.com/lostinsubway/">Instagram</a><a href="https://www.linkedin.com/in/hihaolong/">LinkedIn</a><a href="https://github.com/haolong">GitHub</a></div>
+    <small>© 2026 Haolong Hou</small>
+  </div>
+</footer>
+</body>
+</html>

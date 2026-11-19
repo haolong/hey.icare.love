@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ABC Virus Radar — Haolong Hou</title>
+<meta name="description" content="ABC Virus Radar: a COVID-19 contact-warning app designed and built in the first weeks of the pandemic, released on WeChat on February 8, 2020.">
+<meta property="og:title" content="ABC Virus Radar — Haolong Hou">
+<meta property="og:image" content="https://hey.icare.love/assets/img/abc/at-a-glance.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23111'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../">Haolong Hou</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../" aria-current="page">Work</a>
+      <a href="../info/">Info</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <a class="back" href="../#work">← All work</a>
+
+  <header class="proj-head">
+    <p class="eyebrow"><b>04</b> · Jan – Jun 2020 · Civic tech</p>
+    <h1>ABC Virus Radar</h1>
+    <p class="lede">In the first weeks of COVID-19, I designed and built a contact-warning app for WeChat. It was released on February 8, 2020, two months before Apple and Google announced their joint exposure-notification framework.</p>
+    <dl class="facts">
+      <div><dt>Role</dt><dd>Concept, product and UI design, logo, development, simulation and documentation</dd></div>
+      <div><dt>Platform</dt><dd>WeChat Mini Program; WeChat Cloud Development (Node.js cloud functions, document database with geospatial queries); Tencent Maps</dd></div>
+      <div><dt>Registered</dt><dd>U.S. Copyright Office TX 8-886-536 (computer program, 2020) · China software copyright 2020SR1053878 (V1.1, 2020)</dd></div>
+      <div><dt>Timeline</dt><dd>Started on Lunar New Year 2020 in New York · released Feb 8 · enterprise mode in March · privacy-first v2 design in June</dd></div>
+    </dl>
+  </header>
+
+  <figure class="hero-fig">
+    <img src="../assets/img/abc/at-a-glance.jpg" srcset="../assets/img/abc/at-a-glance-sm.jpg 900w, ../assets/img/abc/at-a-glance.jpg 1280w" sizes="(max-width: 1200px) 100vw, 1120px" width="1280" height="720" alt="ABC Virus Radar at a glance: a phone screen with contact markers on a map, surrounded by labels describing recording, sharing and scanning.">
+    <figcaption><span class="k">At a glance</span>The one-page overview I made for partners in March 2020.</figcaption>
+  </figure>
+
+  <section class="chapter">
+    <div class="chapter-side"><span class="chapter-no">01</span><span class="label">How it worked</span></div>
+    <div class="body">
+      <h2>Record, share, scan</h2>
+      <p><strong>Record:</strong> the phone notes its location every 10 minutes and keeps the history only on the device. <strong>Share:</strong> people who test positive (or are suspected) upload their last 14 days of locations. <strong>Scan:</strong> everyone else checks their own history against the shared data. A match within about 5 metres and 10 minutes produces an early risk warning.</p>
+      <p>The name comes from the transmission chain the app targets: an infected person (<strong>A</strong>) unknowingly meets strangers in public (<strong>B</strong>), who then infect the people close to them (<strong>C</strong>). Warning the B group early can break the chain. An enterprise mode let a company share alerts within its own group.</p>
+      <figure>
+        <img src="../assets/img/abc/cover.jpg" width="1041" height="361" loading="lazy" alt="Banner: #ABCvirusRADAR, a mini app helps track our risk, with the green footprint logo.">
+      </figure>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-side"><span class="chapter-no">02</span><span class="label">Simulation</span></div>
+    <div class="body">
+      <h2>Testing the idea</h2>
+      <p>To test whether early warnings could matter, I built an agent-based SEIR simulation in NetLogo and ran it with the app switched on and off. With the app on, the infection curve flattened noticeably.</p>
+      <div class="figs two">
+        <figure><img src="../assets/img/abc/simulation-off-sm.jpg" width="900" height="563" loading="lazy" alt="NetLogo simulation with the app off: a tall infection curve."><figcaption><span class="k">Off</span>Without the app</figcaption></figure>
+        <figure><img src="../assets/img/abc/simulation-on-sm.jpg" width="900" height="561" loading="lazy" alt="NetLogo simulation with the app on: a flatter infection curve."><figcaption><span class="k">On</span>With the app</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-side"><span class="chapter-no">03</span><span class="label">Next version</span></div>
+    <div class="body">
+      <h2>A privacy-first v2</h2>
+      <p>By June 2020 I had specified a second version that would work passively and without a central location record: "always listen, seldom talk." Phones would turn rough location, a time slot and an acoustic fingerprint of the surroundings into hashed contact-event IDs, with three privacy levels. This version was written up as a specification and user manual; it was not built.</p>
+    </div>
+  </section>
+
+  <a class="next-proj" href="../lost-in-subway/"><span class="label">Back to the start</span><strong>Lost in Subway →</strong></a>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="contact"><a href="../info/">Info</a><a href="https://www.instagram.com/lostinsubway/">Instagram</a><a href="https://www.linkedin.com/in/hihaolong/">LinkedIn</a><a href="https://github.com/haolong">GitHub</a></div>
+    <small>© 2026 Haolong Hou</small>
+  </div>
+</footer>
+</body>
+</html>

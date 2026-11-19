@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Owney — A Life in Tags — Haolong Hou</title>
+<meta name="description" content="Owney — A Life in Tags: a time cube of the 67 dated tags given to Owney, the Railway Mail Service dog, from the Smithsonian National Postal Museum collection.">
+<meta property="og:title" content="Owney — A Life in Tags — Haolong Hou">
+<meta property="og:image" content="https://hey.icare.love/assets/img/owney/cube-view.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23111'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../">Haolong Hou</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../" aria-current="page">Work</a>
+      <a href="../info/">Info</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <a class="back" href="../#work">← All work</a>
+
+  <header class="proj-head">
+    <p class="eyebrow"><b>03</b> · Sep – Oct 2026 · Major Studio 1</p>
+    <h1>Owney — A Life in Tags</h1>
+    <p class="lede">Owney was a scruffy dog who found a home at the Albany post office in 1888 and rode the Railway Mail Service trains across the country. Postal workers and admirers gave him tags along the way. I turned the museum's records of those tags into a time cube: each dated tag is a layer of time you can rotate, brush and explore.</p>
+    <dl class="facts">
+      <div><dt>Role</dt><dd>Solo project: data research, concept, visual direction and design; implementation with an AI coding assistant</dd></div>
+      <div><dt>Context</dt><dd>Major Studio 1, Project 1. MS Data Visualization, Parsons</dd></div>
+      <div><dt>Data</dt><dd>Smithsonian Open Access API, National Postal Museum: 377 tag records, 67 tags with precise dates (1892–1897), 23 with museum-supported places</dd></div>
+      <div><dt>Links</dt><dd><a href="https://owney.icare.love/">Live site</a> · <a href="https://github.com/Major-Studio-1/Project-01-owney-publish">Code on GitHub</a></dd></div>
+    </dl>
+    <p class="ai-note">Tools: HTML, CSS and JavaScript, TopoJSON map, Cloudflare Worker and D1 for visitor tags. AI help: OpenAI Codex assisted with implementation, data preparation and testing; OpenAI image generation made the painted scenes and the running-dog animation, which the site labels as atmosphere, not history.</p>
+  </header>
+
+  <figure class="hero-fig">
+    <img src="../assets/img/owney/cube-view.jpg" srcset="../assets/img/owney/cube-view-sm.jpg 900w, ../assets/img/owney/cube-view.jpg 1800w" sizes="(max-width: 1200px) 100vw, 1120px" width="1800" height="1012" alt="The time cube: tag photos stacked in a 3D volume, with a US map and the record for a tag from El Paso, Texas, 1892.">
+    <figcaption><span class="k">The Journey</span>Cube view, with the linked map and the record for a tag from El Paso, 1892.</figcaption>
+  </figure>
+
+  <section class="chapter">
+    <div class="chapter-side"><span class="chapter-no">01</span><span class="label">Concept</span></div>
+    <div class="body">
+      <h2>Tags as layers of time</h2>
+      <p>The time-volume idea comes from Bradley Tangonan's "xy + t" studies, which stack video frames into a block of time. Owney left no film, so his tag photos became the layers: each of the 67 dated tags is a transparent cut-out on its own chronological layer. Viewers switch between Cube view and Timeline view, rotate the cube by drag or touch, and brush a date range; a linked map shows the confirmed cities, and filters for shape, theme and material connect the views.</p>
+      <div class="figs two">
+        <figure><img src="../assets/img/owney/sketch-sm.jpg" width="900" height="675" loading="lazy" alt="Hand sketch titled Owney, the postal dog's badge collection, planning a map, token clusters and a time-cube gallery."><figcaption><span class="k">Sketch</span>The first hand sketch: map, token clusters, time cube.</figcaption></figure>
+        <figure><img src="../assets/img/owney/cube-final-sm.jpg" width="900" height="507" loading="lazy" alt="Final release of the cube, front-facing, showing a tag from Tilton, New Hampshire, 2 May 1896."><figcaption><span class="k">Final</span>The released cube, Tilton, New Hampshire, 1896.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-side"><span class="chapter-no">02</span><span class="label">Method</span></div>
+    <div class="body">
+      <h2>Gaps stay gaps</h2>
+      <p>Of 377 tag records, only 67 have precise usable dates and only 23 have places the museum's records support. The site keeps uncertain dates and places as gaps: no invented stops and no speculative routes. Each tag's card says what the record supports and links back to the museum object.</p>
+      <figure>
+        <img src="../assets/img/owney/collection.jpg" srcset="../assets/img/owney/collection-sm.jpg 900w, ../assets/img/owney/collection.jpg 1800w" sizes="(max-width: 900px) 100vw, 840px" width="1800" height="1012" loading="lazy" alt="The Collection: a grid of transparent tag cut-outs with filters for theme, place, material, date and shape.">
+        <figcaption><span class="k">The Collection</span>All 377 tags as cut-outs, filtered by theme, place, material, date and shape.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-side"><span class="chapter-no">03</span><span class="label">Story</span></div>
+    <div class="body">
+      <h2>A dog who was once alive</h2>
+      <p>The page opens with the museum's photo of Owney wearing his tags. Between the intro and the data, a painted countryside with a running Owney reminds visitors that this was a living dog. At the end, visitors can leave a tag of their own (a city and a message) in a shared collection, and download it as an image.</p>
+      <div class="figs two">
+        <figure><img src="../assets/img/owney/introduction-sm.jpg" width="900" height="445" loading="lazy" alt="Intro: museum photo of Owney wearing many tags, beside the headline Meet Owney. He followed the mail."><figcaption>"Meet Owney. He followed the mail."</figcaption></figure>
+        <figure><img src="../assets/img/owney/running-interlude-sm.jpg" width="900" height="507" loading="lazy" alt="Painted countryside with a running dog wearing tags; caption: a little dog, a life full of journeys."><figcaption>The running interlude (AI-painted, labelled as atmosphere)</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <a class="next-proj" href="../abc-virus-radar/"><span class="label">Next project</span><strong>ABC Virus Radar →</strong></a>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="contact"><a href="../info/">Info</a><a href="https://www.instagram.com/lostinsubway/">Instagram</a><a href="https://www.linkedin.com/in/hihaolong/">LinkedIn</a><a href="https://github.com/haolong">GitHub</a></div>
+    <small>© 2026 Haolong Hou</small>
+  </div>
+</footer>
+</body>
+</html>
