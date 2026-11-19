@@ -64,3 +64,11 @@
 /* keep chapter labels with their titles; smaller ABC banner */
 .print-proj .chapter-side { break-after: avoid; break-inside: avoid; }
 .print-proj img[src*="abc/cover"] { max-width: 105mm; }
+
+/* The Inner White: keep each paragraph whole and the URL line on the last page of content */
+#the-inner-white .chapter .body > p { break-inside: avoid; }
+#the-inner-white .print-url { break-before: avoid; }
+#the-inner-white .hero-fig img { max-height: 66mm; }
+#the-inner-white .figs.wide-narrow img { max-height: 60mm; }
+/* Owney: the first chapter's heading was left alone at a page foot */
+#owney .chapter:first-of-type { break-inside: avoid; }
