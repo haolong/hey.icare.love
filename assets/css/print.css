@@ -72,3 +72,10 @@
 #the-inner-white .figs.wide-narrow img { max-height: 60mm; }
 /* Owney: the first chapter's heading was left alone at a page foot */
 #owney .chapter:first-of-type { break-inside: avoid; }
+/* Lost in the Subway: each Nov 2026 chapter fits on one page; keep its heading, text and figures together */
+#lost-in-subway #model, #lost-in-subway #window-installation, #lost-in-subway #trails, #lost-in-subway #installation { break-inside: avoid; }
+#lost-in-subway #window-installation .body > figure img { max-height: 54mm; }
+#lost-in-subway #window-installation .figs.two img { max-height: 50mm; }
+/* The Inner White: the six film frames as one storyboard strip, so the project stays on two pages */
+#the-inner-white .figs.three { grid-template-columns: repeat(6, 1fr); gap: 2mm; }
+#the-inner-white .figs.three figcaption { font-size: 6.5pt; }

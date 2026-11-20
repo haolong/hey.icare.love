@@ -1,5 +1,6 @@
-# local-only: build helpers, preview config, print source and PDF
+# local-only: build helpers, preview config, print source and PDFs (except the published portfolio PDF)
 .claude/
 tools/
 print.html
 *.pdf
+!Haolong-Hou-Portfolio.pdf
