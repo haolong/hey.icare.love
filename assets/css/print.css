@@ -79,3 +79,5 @@
 /* The Inner White: the six film frames as one storyboard strip, so the project stays on two pages */
 #the-inner-white .figs.three { grid-template-columns: repeat(6, 1fr); gap: 2mm; }
 #the-inner-white .figs.three figcaption { font-size: 6.5pt; }
+/* The "play the game first" note is for the website only */
+.print-proj .spoiler-note { display: none; }

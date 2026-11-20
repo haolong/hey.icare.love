@@ -126,6 +126,10 @@ figcaption .k { color: var(--ink); margin-right: 6px; }
 .linkrow { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 0 0 8px; font-size: 14px; grid-column: 2 !important; }
 .linkrow a { text-decoration: underline; text-decoration-color: #c9c9c9; text-underline-offset: 0.2em; }
 .linkrow a::after { content: " ↗"; }
+.spoiler-note { display: grid; grid-template-columns: 5fr 7fr; gap: 0 clamp(28px, 5vw, 80px); margin: 0 0 clamp(48px, 7vw, 88px); }
+.spoiler-note p { grid-column: 2; margin: 0; max-width: 40rem; font-size: 14px; line-height: 1.5; color: var(--muted); border-left: 2px solid var(--rule); padding-left: 12px; }
+.spoiler-note a { color: var(--ink); text-decoration: underline; text-decoration-color: #c9c9c9; text-underline-offset: 0.2em; }
+@media (max-width: 900px) { .spoiler-note { grid-template-columns: 1fr; } .spoiler-note p { grid-column: 1; } }
 
 .figs { display: grid; gap: clamp(12px, 2vw, 24px); margin: clamp(20px, 3vw, 36px) 0 0; }
 .figs.two { grid-template-columns: 1fr 1fr; }
